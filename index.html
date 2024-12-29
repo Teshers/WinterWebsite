@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Tis the Season!</title>
+    <style>
+    	body {
+        	height:100vh;
+            overflow:hidden;
+            text-align:center;
+            font-family:Verdana;
+            background: #86fcfa;
+        }
+        
+      img {
+      		width: 250px;
+            animation: spin 6s linear;
+      }
+
+       .snowman {
+		  position: absolute;
+		  font-size: 40px;
+		  top: -30px;
+		  animation: fall linear infinite;
+			}     
+     
+      @keyframes fall {
+             0% {
+       		 transform: translateY(0);
+       		 }
+       		 100% {
+      		 transform: translateY(100vh);
+    	     }
+        }
+        
+      @keyframes spin {
+            0% {
+                transform: rotate(0deg);  
+            }
+            100% {
+                transform: rotate(360deg); 
+            }
+        }
+        .snowman:nth-child(1) {
+        	left: 5%;
+            animation-duration: 4s;
+        }
+        .snowman:nth-child(2) {
+        	left: 20%;
+            animation-duration: 3s;
+        }
+        .snowman:nth-child(3) {
+        	left: 40%;
+            animation-duration: 7s;
+        }
+        .snowman:nth-child(4) {
+        	left: 60%;
+            animation-duration: 8s;
+        }
+         .snowman:nth-child(5) {
+        	left:80%;
+            animation-duration: 6s;
+        }
+        .snowman:nth-child(6) {
+        	left: 95%;
+            animation-duration: 5s;
+        }
+   
+        .upside-down {
+            transform: rotate(180deg);
+            display: inline-block;  
+        }
+  
+    </style> 
+</head>
+  
+<body>
+  <div class="snowman">☃️</div>
+  <div class="snowman">🎄</div>
+  <div class="snowman">❄️</div>
+  <div class="snowman">🎁</div>
+  <div class="snowman">🧑‍🎄</div>
+  <div class="snowman">🔮</div>
+  <h1> Happy Holidays!</h1>
+  <h5>Welcome to my christmas website!</h5>
+  <img src="https://media.hswstatic.com/eyJidWNrZXQiOiJjb250ZW50Lmhzd3N0YXRpYy5jb20iLCJrZXkiOiJnaWZcL3NhbnRhLWNsYXVzLTguanBnIiwiZWRpdHMiOnsicmVzaXplIjp7IndpZHRoIjo4Mjh9fX0=">
+  <br>
+  <a href="https://www.xmasclock.com/"> Link to Christmas Countdown</a>  
+  <h4> What did Frosty’s girlfriend give him when she was mad at him?</h4>
+ <p>
+        <button onclick="toggleText()">Click to reveal</button>
+    </p>
+    <p id="cold-shoulder">The cold shoulder</p>
+
+    <script>
+       
+        window.onload = function() {
+            document.getElementById("cold-shoulder").style.display = "none";
+        };
+
+        function toggleText() {
+            var text = document.getElementById("cold-shoulder");
+            if (text.style.display === "none") {
+                text.style.display = "block";  
+            } else {
+                text.style.display = "none";
+            }
+        }
+    </script>
+    
+	<h4> Why is everyone thirsty at the North Pole? </h4> 
+        <p class="upside-down">There was no well!</p>
+        
+    <h> Merry Christmas! </h> 
+</body>
